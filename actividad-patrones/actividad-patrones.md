@@ -15,7 +15,6 @@ q# Ejercicios sobre Sistema de Inventario de Equipos Informáticos en TypeScript
 const inventario = Inventario.obtenerInstancia();
 inventario.agregarEquipo("Notebook HP", "Portátil", "disponible");
 console.log(inventario.listarEquipos());
-// [{ nombre: "Notebook HP", tipo: "Portátil", estado: "disponible" }]
 ```
 
 ## Ejercicio 2: Implementar Patrón Factory Method para Crear Equipos
@@ -32,7 +31,6 @@ console.log(inventario.listarEquipos());
 const factory = new EquipoFactory();
 const Notebook = factory.crearEquipo("Notebook", "Dell XPS", "16GB", "i7");
 console.log(Notebook.detalles());
-// Tipo: Notebook, Nombre: Dell XPS, RAM: 16GB, Procesador: i7
 ```
 
 ## Ejercicio 3: Implementar Patrón Observer para Seguimiento del Estado
@@ -50,7 +48,6 @@ const soporte = new Soporte();
 const equipo = new Equipo("Notebook HP", "Portátil", "disponible");
 equipo.agregarObservador(soporte);
 equipo.cambiarEstado("en reparación");
-// Soporte notificado: Notebook HP ha cambiado su estado a en reparación.
 ```
 
 ## Ejercicio 4: Adaptador para Cambiar la Interfaz de Inventarios Viejos
@@ -68,5 +65,4 @@ const inventarioViejo = new InventarioViejo();
 const adaptador = new AdaptadorInventario(inventarioViejo);
 adaptador.agregarEquipo("Servidor Dell", "Servidor", "disponible");
 console.log(adaptador.listarEquipos());
-// [{ nombre: "Servidor Dell", tipo: "Servidor", estado: "disponible" }]
 ```
